@@ -3,7 +3,9 @@
 import sys
 
 def build_list(n, arr):
-  if n == 1:
+  if n == 0:
+    return [[]]
+  elif n == 1:
     return arr
   else:
     new_arr = []
