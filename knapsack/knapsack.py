@@ -25,6 +25,7 @@ def knapsack_solver(items, capacity):
   #     value += sorted_items[i][2]
   #   i += 1
   # return {'Value': value, 'Chosen': [item[0] for item in selected]}
+  
   if not items:
     return items
   elif sum_items_capacity > capacity:
