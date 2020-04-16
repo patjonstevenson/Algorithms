@@ -3,7 +3,17 @@
 import math
 
 def recipe_batches(recipe, ingredients):
-  pass 
+  max_batches = math.inf
+  for ingred in recipe:
+    if ingred not in ingredients:
+      return 0
+    elif recipe[ingred] > ingredients[ingred]:
+      return 0
+    else:
+      batches = ingredients[ingred] // recipe[ingred]
+      if batches < max_batches:
+        max_batches = batches
+  return max_batches
 
 
 if __name__ == '__main__':
